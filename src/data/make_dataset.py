@@ -31,7 +31,8 @@
 import logging                               #<-- For ease of debugging
 from pathlib import Path                     #<-- Because we need a path forward
 from dotenv import find_dotenv, load_dotenv
-from pandas.core.algorithms import isin  #<-- It's nice to have an environment
+from pandas.core.algorithms import isin
+from requests.models import HTTPError, Response  #<-- It's nice to have an environment
 import streamlit as st                       #<-- For app deployment
 import pandas as pd                          #<-- Frame your Data
 import requests
@@ -65,6 +66,7 @@ except:
 
 # Import modules ----
 from src import utils
+from src import config
 
 
 
@@ -106,21 +108,47 @@ def let_DumpData(Data, TargetFilePath=os.path.join(project_dir,"data/raw"), Targ
 #------------------------------------------------------------------------------#
 
 # Get the raw data ----
-def get_RawData(url="http://stat.data.abs.gov.au/sdmx-json/data/ABS_SEIFA2016_POA/2773+2750+2148.IRSAD+IRSD+IER+IEO.SCORE+RWAR+RWA+RWAD+RWAP+RWSR+RWST+RWSD+RWSP+MINS+MAXS+URP/all?detail=Full&dimensionAtObservation=AllDimensions&startPeriod=2016"):
+def get_RawData(url=config.PostCode):
+    """
+    Get raw data from the ABS website.
+    For API formatting & error handling tips, see: https://realpython.com/python-requests/#status-codes
+
+    Args:
+        url (str, optional): The url that should be called to get the raw data from. Defaults to config.PostCode.
+
+    Raises:
+        ImportError: If the URL is invalid or if the API returns a bad status code.
+        ImportError: [description]
+
+    Returns:
+        dict: The JSON output from the API response
+    """
+    
+    # Assertions
     assert isinstance(url, str)
     assert utils.valid_url(url)
-    call = requests.get(url)
-    if call.status_code in [200]:
-        call = requests.get(url).json()
-        logger.info('successfully imported file')
+    
+    # Call the Api
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+    except HTTPError as http_err:
+        logger.error("HTTP error occurred: {}".format(http_err))
+        raise ImportError("Cannot connect to API.")
+    except Exception as err:
+        logger.error("Unknown error occurred\nStatus code: {}\nMessage: {}".format(response.status_code, err))
+        raise ImportError("Unknown error occurred")
     else:
-        raise ImportError(call.status_code)
+        call = response.json()
+        logger.info('successfully imported file')
+    
+    # Return
     return call
     
 
 # Get the data ----
 def set_RawData():
-    raw = get_RawData()
+    raw = get_RawData(config.PostCode)
     let_DumpData(raw, os.path.join(project_dir, "data/raw"), "RawData.json")
     return raw
     
