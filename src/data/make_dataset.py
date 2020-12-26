@@ -30,13 +30,9 @@
 # import click                                 #<-- Interactivity
 import logging                               #<-- For ease of debugging
 from pathlib import Path                     #<-- Because we need a path forward
-from dotenv import find_dotenv, load_dotenv
-from pandas.core.algorithms import isin
-from requests.models import HTTPError, Response  #<-- It's nice to have an environment
+from dotenv import find_dotenv, load_dotenv  #<-- It's nice to have an environment
 import streamlit as st                       #<-- For app deployment
 import pandas as pd                          #<-- Frame your Data
-import requests
-import json
 from pprint import pprint
 import os
 import sys
@@ -58,8 +54,6 @@ try:
     # The directory "." is added to the Path environment so modules can easily be called between files.
     if not os.path.abspath(project_dir) in sys.path:
         sys.path.append(os.path.abspath(project_dir))
-    # from src.modules import GlobalFunctions as fun
-    # from src.config import params
 except:
     raise ModuleNotFoundError("The custom modules were not able to be loaded.")
 
@@ -71,85 +65,16 @@ from src import config
 
 
 #------------------------------------------------------------------------------#
-# Declare common functions                                                  ####
-#------------------------------------------------------------------------------#
-
-
-# Dump the data ----
-def let_DumpData(Data, TargetFilePath=os.path.join(project_dir,"data/raw"), TargetFileName="RawData.json"):
-    assert isinstance(Data, (dict, pd.DataFrame))
-    assert isinstance(TargetFileName, str)
-    assert os.path.exists(TargetFilePath)
-    try:
-        if isinstance(Data, dict):
-            with open(os.path.join(os.path.abspath(TargetFilePath), TargetFileName), "w") as fp:
-                json.dump(Data, fp)
-            logger.info('successfully dumped json data')
-        if isinstance(Data, pd.DataFrame):
-            Data.to_csv(os.path.join(os.path.abspath(TargetFilePath), TargetFileName))
-            logger.info('successfully dumped csv data')
-        result = True
-    except:
-        result = False
-        logger.error("failed to dump the data")
-    return result
-
-
-
-#------------------------------------------------------------------------------#
 #                                                                              #
 #    Main Part                                                              ####
 #                                                                              #
 #------------------------------------------------------------------------------#
 
 
-#------------------------------------------------------------------------------#
-# Get Raw Data                                                              ####
-#------------------------------------------------------------------------------#
-
-# Get the raw data ----
-def get_RawData(url=config.PostCode):
-    """
-    Get raw data from the ABS website.
-    For API formatting & error handling tips, see: https://realpython.com/python-requests/#status-codes
-
-    Args:
-        url (str, optional): The url that should be called to get the raw data from. Defaults to config.PostCode.
-
-    Raises:
-        ImportError: If the URL is invalid or if the API returns a bad status code.
-        ImportError: [description]
-
-    Returns:
-        dict: The JSON output from the API response
-    """
-    
-    # Assertions
-    assert isinstance(url, str)
-    assert utils.valid_url(url)
-    
-    # Call the Api
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-    except HTTPError as http_err:
-        logger.error("HTTP error occurred: {}".format(http_err))
-        raise ImportError("Cannot connect to API.")
-    except Exception as err:
-        logger.error("Unknown error occurred\nStatus code: {}\nMessage: {}".format(response.status_code, err))
-        raise ImportError("Unknown error occurred")
-    else:
-        call = response.json()
-        logger.info('successfully imported file')
-    
-    # Return
-    return call
-    
-
 # Get the data ----
 def set_RawData():
-    raw = get_RawData(config.PostCode)
-    let_DumpData(raw, os.path.join(project_dir, "data/raw"), "RawData.json")
+    raw = utils.get_RawData(config.PostCode)
+    utils.let_DumpData(raw, os.path.join(project_dir, "data/raw"), "RawData.json")
     return raw
     
     
@@ -280,7 +205,7 @@ def set_ProcessData(raw):
     """
     data = get_DataFrame(raw)
     data = let_FixData(data, raw)
-    let_DumpData(data, os.path.join(project_dir, "data/processed"), TargetFileName="ProcessedData.csv")
+    utils.let_DumpData(data, os.path.join(project_dir, "data/processed"), TargetFileName="ProcessedData.csv")
     return data
 
 
