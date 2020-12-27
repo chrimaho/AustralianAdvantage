@@ -169,14 +169,14 @@ def set_FixData(DataFrame, raw):
     del data["variable"]
 
     # Convert data
-    data.iloc[:,2] = data.iloc[:,2].replace(get_DataLabels(raw, "POA", "id"))
-    data.iloc[:,3] = data.iloc[:,3].replace(get_DataLabels(raw, "SEIFAINDEXTYPE", "id"))
-    data.iloc[:,4] = data.iloc[:,4].replace(get_DataLabels(raw, "SEIFA_MEASURE", "id"))
-    data.iloc[:,5] = data.iloc[:,5].replace(get_DataLabels(raw, "TIME_PERIOD", "id"))
-    data.iloc[:,6] = data.iloc[:,6].replace(get_DataLabels(raw, "POA", "name"))
-    data.iloc[:,7] = data.iloc[:,7].replace(get_DataLabels(raw, "SEIFAINDEXTYPE", "name"))
-    data.iloc[:,8] = data.iloc[:,8].replace(get_DataLabels(raw, "SEIFA_MEASURE", "name"))
-    data.iloc[:,9] = data.iloc[:,9].replace(get_DataLabels(raw, "TIME_PERIOD", "name"))
+    data.iloc[:,1] = data.iloc[:,1].replace(get_DataLabels(raw, "POA", "id"))
+    data.iloc[:,2] = data.iloc[:,2].replace(get_DataLabels(raw, "SEIFAINDEXTYPE", "id"))
+    data.iloc[:,3] = data.iloc[:,3].replace(get_DataLabels(raw, "SEIFA_MEASURE", "id"))
+    data.iloc[:,4] = data.iloc[:,4].replace(get_DataLabels(raw, "TIME_PERIOD", "id"))
+    data.iloc[:,5] = data.iloc[:,5].replace(get_DataLabels(raw, "POA", "name"))
+    data.iloc[:,6] = data.iloc[:,6].replace(get_DataLabels(raw, "SEIFAINDEXTYPE", "name"))
+    data.iloc[:,7] = data.iloc[:,7].replace(get_DataLabels(raw, "SEIFA_MEASURE", "name"))
+    data.iloc[:,8] = data.iloc[:,8].replace(get_DataLabels(raw, "TIME_PERIOD", "name"))
 
     # Rename columns
     data = data.rename(columns={
@@ -221,9 +221,9 @@ def main():
     
     # Process data
     data = set_DataFrame(raw)
-    utils.let_DumpData(raw, os.path.join(project_dir, "data/raw"), "Seifa2016_POA_Raw.json")
+    utils.let_DumpData(data, os.path.join(project_dir, "data/raw"), "Seifa2016_POA_Raw.csv")
     data = set_FixData(data, raw)
-    utils.let_DumpData(data, os.path.join(project_dir, "data/processed"), TargetFileName="ProcessedData.csv")
+    utils.let_DumpData(data, os.path.join(project_dir, "data/processed"), TargetFileName="Seifa2016_POA_Processed.csv")
     print(data)
     
     return(data)
@@ -233,7 +233,7 @@ def main():
 if __name__ == '__main__':
     log_fmt = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     logger = logging.getLogger(__name__)
-    logging.basicsources(level=logging.INFO, format=log_fmt)
+    logging.basicConfig(level=logging.INFO, format=log_fmt)
 
     # find .env automagically by walking up directories until it's found, then
     # load up the .env entries as environment variables
