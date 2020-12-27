@@ -38,16 +38,15 @@ import os
 import sys
 
 
+
 #------------------------------------------------------------------------------#
-# Set root directory                                                        ####
+# Import sources                                                            ####
 #------------------------------------------------------------------------------#
 
+
+# Set root directory ----
 project_dir = Path(__file__).resolve().parents[2]
 
-
-#------------------------------------------------------------------------------#
-# Import Configs                                                            ####
-#------------------------------------------------------------------------------#
 
 # Add directory to Sys path ----
 try:
@@ -60,7 +59,7 @@ except:
 
 # Import modules ----
 from src import utils
-from src import config
+from src import sources
 
 
 
@@ -71,14 +70,6 @@ from src import config
 #------------------------------------------------------------------------------#
 
 
-# Get the data ----
-def set_RawData():
-    raw = utils.get_RawData(config.PostCode)
-    utils.let_DumpData(raw, os.path.join(project_dir, "data/raw"), "RawData.json")
-    return raw
-    
-    
-    
 #------------------------------------------------------------------------------#
 # Process Data                                                              ####
 #------------------------------------------------------------------------------#
@@ -132,7 +123,7 @@ def get_DataLabels(raw, label="POA", element="id"):
 
 
 # Extract the data ----
-def get_DataFrame(raw):
+def set_DataFrame(raw):
     
     # Assertions
     assert isinstance(raw, dict)
@@ -149,10 +140,21 @@ def get_DataFrame(raw):
 
 
 # Fix the data frame ----
-def let_FixData(DataFrame, raw):
+def set_FixData(DataFrame, raw):
+    """
+    Fix the data and make it manageable and logical
+
+    Args:
+        DataFrame (pd.DataFrame): The DataFrame to be processed
+        raw (dict): The dictionary containing the raw information, as extracted from the ABS.
+
+    Returns:
+        pd.DataFrame: The processed DataFrame
+    """
     
     # Assertions
     assert isinstance(DataFrame, pd.DataFrame)
+    assert isinstance(raw, dict)
 
     # Melt the frame
     data = DataFrame.melt()
@@ -162,6 +164,9 @@ def let_FixData(DataFrame, raw):
 
     # Duplicate columns
     data[[5,6,7,8]] = data[[1,2,3,4]]
+    
+    # Drop the unnecessary column
+    del data["variable"]
 
     # Convert data
     data.iloc[:,2] = data.iloc[:,2].replace(get_DataLabels(raw, "POA", "id"))
@@ -184,28 +189,8 @@ def let_FixData(DataFrame, raw):
         7:raw["structure"]["dimensions"]["observation"][2]["name"].replace(" ","") + "Long",
         8:raw["structure"]["dimensions"]["observation"][3]["name"].replace(" ","") + "Long",
         })
-    
-    # Drop the unnecessary column
-    del data["variable"]
 
     # Return
-    return data
-
-
-# Process the data ----
-def set_ProcessData(raw):
-    """
-    Run the combined scripts to process the raw data.
-
-    Args:
-        raw (dict): The raw data, as extracted from the ABS.
-
-    Returns:
-        pd.DataFrame: The processed dataframe.
-    """
-    data = get_DataFrame(raw)
-    data = let_FixData(data, raw)
-    utils.let_DumpData(data, os.path.join(project_dir, "data/processed"), TargetFileName="ProcessedData.csv")
     return data
 
 
@@ -231,20 +216,24 @@ def main():
     logger.info('making final data set from raw data')
     
     # Get data
-    raw = set_RawData()
+    raw = utils.get_RawData(sources.PostalAreaCode)
+    utils.let_DumpData(raw, os.path.join(project_dir, "data/raw"), "Seifa2016_POA_Raw.json")
     
-    # Dump data
-    dat = set_ProcessData(raw)
-    display(dat)
+    # Process data
+    data = set_DataFrame(raw)
+    utils.let_DumpData(raw, os.path.join(project_dir, "data/raw"), "Seifa2016_POA_Raw.json")
+    data = set_FixData(data, raw)
+    utils.let_DumpData(data, os.path.join(project_dir, "data/processed"), TargetFileName="ProcessedData.csv")
+    print(data)
     
-    return(dat)
+    return(data)
     
 
 # Run ----
 if __name__ == '__main__':
     log_fmt = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     logger = logging.getLogger(__name__)
-    logging.basicConfig(level=logging.INFO, format=log_fmt)
+    logging.basicsources(level=logging.INFO, format=log_fmt)
 
     # find .env automagically by walking up directories until it's found, then
     # load up the .env entries as environment variables

@@ -1,13 +1,13 @@
 #==============================================================================#
 #                                                                              #
-#    Title: Title                                                              #
-#    Purpose: Purpose                                                          #
-#    Notes: Notes                                                              #
+#    Title: utils                                                              #
+#    Purpose: Provide the utilities to be used by other modules                #
+#    Notes: ...                                                                #
 #    Author: chrimaho                                                          #
 #    Created: Created                                                          #
-#    References: References                                                    #
-#    Sources: Sources                                                          #
-#    Edited: Edited                                                            #
+#    References: 26/Dec/2020                                                   #
+#    Sources: ...                                                              #
+#    Edited: ...                                                               #
 #                                                                              #
 #==============================================================================#
 
@@ -28,15 +28,13 @@ import pandas as pd
 
 
 #------------------------------------------------------------------------------#
-# Set root directory                                                        ####
+# Import sources                                                            ####
 #------------------------------------------------------------------------------#
 
+
+# Set root directory ----
 project_dir = Path(__file__).resolve().parents[2]
 
-
-#------------------------------------------------------------------------------#
-# Import Configs                                                            ####
-#------------------------------------------------------------------------------#
 
 # Add directory to Sys path ----
 try:
@@ -49,7 +47,7 @@ except:
 
 # Import modules ----
 from src import utils
-from src import config
+from src import sources
 
 
 #------------------------------------------------------------------------------#
@@ -81,13 +79,13 @@ def valid_url(url):
 #------------------------------------------------------------------------------#
 
 # Get the raw data ----
-def get_RawData(url=config.PostCode):
+def get_RawData(url=sources.PostalAreaCode):
     """
     Get raw data from the ABS website.
     For API formatting & error handling tips, see: https://realpython.com/python-requests/#status-codes
 
     Args:
-        url (str, optional): The url that should be called to get the raw data from. Defaults to config.PostCode.
+        url (str, optional): The url that should be called to get the raw data from. Defaults to sources.PostalAreaCode.
 
     Raises:
         ImportError: If the URL is invalid or if the API returns a bad status code.
