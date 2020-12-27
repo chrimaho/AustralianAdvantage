@@ -17,10 +17,12 @@
 # Packages                                                                  ####
 #------------------------------------------------------------------------------#
 
+from io import IncrementalNewlineDecoder
 from pathlib import Path
 from urllib.parse import urlparse
 import os
 import sys
+from numpy.lib.arraysetops import isin
 from requests.models import HTTPError
 import requests
 import json
@@ -119,19 +121,45 @@ def get_RawData(url=sources.PostalAreaCode):
 
 # Dump the data ----
 def let_DumpData(Data, TargetFilePath=os.path.join(project_dir,"data/raw"), TargetFileName="RawData.json"):
+    # Assertions
     assert isinstance(Data, (dict, pd.DataFrame))
     assert isinstance(TargetFileName, str)
     assert os.path.exists(TargetFilePath)
+    
+    # Declare fullname
+    FullName = os.path.join(os.path.abspath(TargetFilePath), TargetFileName)
+    
+    # Try the dump
     try:
         if isinstance(Data, dict):
-            with open(os.path.join(os.path.abspath(TargetFilePath), TargetFileName), "w") as fp:
-                json.dump(Data, fp)
+            with open(FullName, "w") as fp:
+                json.dump(Data, fp, indent=4)
             # logger.info('successfully dumped json data')
         if isinstance(Data, pd.DataFrame):
-            Data.to_csv(os.path.join(os.path.abspath(TargetFilePath), TargetFileName))
+            Data.to_csv(FullName)
             # logger.info('successfully dumped csv data')
         result = True
     except:
         result = False
         # logger.error("failed to dump the data")
+        
+    # Return the result
     return result
+
+
+# Get Json file ----
+def get_LoadJson(TargetFileFullName):
+    
+    # Assertions
+    assert isinstance(TargetFileFullName, str)
+    assert os.path.exists(TargetFileFullName)
+    
+    # Try to read
+    try:
+        with open(TargetFileFullName, "r") as file:
+            data = json.loads(file.read())
+    except:
+        raise ImportError("There was an issue importing the data.")
+    
+    # Return the result
+    return data
