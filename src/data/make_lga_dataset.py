@@ -1,7 +1,7 @@
 #%%
 #==============================================================================#
 #                                                                              #
-#    Title: Make PostCodes Dataset                                             #
+#    Title: Make LGA Dataset                                                   #
 #    Purpose: To download and process the data for the App                     #
 #    Notes: ...                                                                #
 #    Author: chrimaho                                                          #
@@ -215,14 +215,14 @@ def main():
     logger.info('making final data set from raw data')
     
     # Get data
-    raw = utils.get_RawData(sources.PostalAreaCode)
-    utils.let_DumpData(raw, os.path.join(project_dir, "data/raw"), "Seifa2016_POA_Raw.json")
+    raw = utils.get_RawData(sources.LocalGovernmentArea)
+    utils.let_DumpData(raw, os.path.join(project_dir, "data/raw"), "Seifa2016_LGA_Raw.json")
     
     # Process data
     data = set_DataFrame(raw)
-    utils.let_DumpData(data, os.path.join(project_dir, "data/raw"), "Seifa2016_POA_Raw.csv")
+    utils.let_DumpData(data, os.path.join(project_dir, "data/raw"), "Seifa2016_LGA_Raw.csv")
     data = set_FixData(data, raw)
-    utils.let_DumpData(data, os.path.join(project_dir, "data/processed"), TargetFileName="Seifa2016_POA_Processed.csv")
+    utils.let_DumpData(data, os.path.join(project_dir, "data/processed"), TargetFileName="Seifa2016_LGA_Processed.csv")
     print(data)
     
     return(data)
