@@ -74,59 +74,12 @@ from src import sources
 #------------------------------------------------------------------------------#
 
 
-# Get the data labels ----
-def get_DataLabels(raw, label="POA", element="id"):
-    """
-    Get the labels from a given object.
-
-    Args:
-        object (dict): The dictionary, from which the labels will be derrived.
-        label (str, optional): Which of the data elements should be exported. Defaults to "POA".
-        element (str, optional): Should the 'id' or the 'name' be exported. Defaults to "id".
-
-    Returns:
-        dict: A dictionary containing the index and label for each data element.
-    """
-
-    # Assertions
-    assert isinstance(raw, dict)
-    assert list(raw.keys())==['header', 'dataSets', 'structure']
-    assert isinstance(label, (str, int))
-    OkayLabels = ['POA', 'SEIFAINDEXTYPE', 'SEIFA_MEASURE', 'TIME_PERIOD']
-    assert utils.all_in([label["id"] for label in raw["structure"]["dimensions"]["observation"]], OkayLabels + list(range(4)))
-    assert element in ["id","name"]
-
-    # Get Index
-    if isinstance(label, str):
-        KeyIndex = OkayLabels.index(label)
-    else:
-        KeyIndex = label
-
-    # Get list
-    LabelsList = raw['structure']['dimensions']['observation'][KeyIndex]['values']
-
-    # Declare empty list
-    lst_Labels = list()
-    lst_Indexes = list()
-
-    # Itterate
-    for index, label in enumerate(LabelsList):
-        lst_Labels.append(label[element])
-        lst_Indexes.append(str(index))
-
-    # Make dict
-    dic_Labels = dict(zip(lst_Indexes,lst_Labels))
-
-    # Return
-    return dic_Labels
-
-
 # Extract the data ----
 def set_DataFrame(raw):
     
     # Assertions
     assert isinstance(raw, dict)
-    assert list(raw.keys())==['header','dataSets','structure']
+    assert list(raw)==['header','dataSets','structure']
 
     # Get data
     data = raw['dataSets'][0]['observations']
@@ -168,14 +121,14 @@ def set_FixData(DataFrame, raw):
     del data["variable"]
 
     # Convert data
-    data.iloc[:,1] = data.iloc[:,1].replace(get_DataLabels(raw, "POA", "id"))
-    data.iloc[:,2] = data.iloc[:,2].replace(get_DataLabels(raw, "SEIFAINDEXTYPE", "id"))
-    data.iloc[:,3] = data.iloc[:,3].replace(get_DataLabels(raw, "SEIFA_MEASURE", "id"))
-    data.iloc[:,4] = data.iloc[:,4].replace(get_DataLabels(raw, "TIME_PERIOD", "id"))
-    data.iloc[:,5] = data.iloc[:,5].replace(get_DataLabels(raw, "POA", "name"))
-    data.iloc[:,6] = data.iloc[:,6].replace(get_DataLabels(raw, "SEIFAINDEXTYPE", "name"))
-    data.iloc[:,7] = data.iloc[:,7].replace(get_DataLabels(raw, "SEIFA_MEASURE", "name"))
-    data.iloc[:,8] = data.iloc[:,8].replace(get_DataLabels(raw, "TIME_PERIOD", "name"))
+    data.iloc[:,1] = data.iloc[:,1].replace(utils.get_DataLabels(raw, 1, "id"))
+    data.iloc[:,2] = data.iloc[:,2].replace(utils.get_DataLabels(raw, "SEIFAINDEXTYPE", "id"))
+    data.iloc[:,3] = data.iloc[:,3].replace(utils.get_DataLabels(raw, "SEIFA_MEASURE", "id"))
+    data.iloc[:,4] = data.iloc[:,4].replace(utils.get_DataLabels(raw, "TIME_PERIOD", "id"))
+    data.iloc[:,5] = data.iloc[:,5].replace(utils.get_DataLabels(raw, 1, "name"))
+    data.iloc[:,6] = data.iloc[:,6].replace(utils.get_DataLabels(raw, "SEIFAINDEXTYPE", "name"))
+    data.iloc[:,7] = data.iloc[:,7].replace(utils.get_DataLabels(raw, "SEIFA_MEASURE", "name"))
+    data.iloc[:,8] = data.iloc[:,8].replace(utils.get_DataLabels(raw, "TIME_PERIOD", "name"))
 
     # Rename columns
     data = data.rename(columns={
@@ -191,7 +144,6 @@ def set_FixData(DataFrame, raw):
 
     # Return
     return data
-
 
 
 #------------------------------------------------------------------------------#
