@@ -103,7 +103,7 @@ def get_RawData(url=sources.PostalAreaCode):
     
     # Call the Api & handle the response
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=240)
         response.raise_for_status()
     except HTTPError as http_err:
         # logger.error("HTTP error occurred: {}".format(http_err))
@@ -117,6 +117,12 @@ def get_RawData(url=sources.PostalAreaCode):
     
     # Return
     return call
+
+
+
+#------------------------------------------------------------------------------#
+# Import/Export the Data                                                    ####
+#------------------------------------------------------------------------------#
 
 
 # Dump the data ----
@@ -162,4 +168,78 @@ def get_LoadJson(TargetFileFullName):
         raise ImportError("There was an issue importing the data.")
     
     # Return the result
+    return data
+
+
+
+#------------------------------------------------------------------------------#
+# Data Processing                                                           ####
+#------------------------------------------------------------------------------#
+
+
+# Get the data labels ----
+def get_DataLabels(raw, label="POA", element="id"):
+    """
+    Extract the data labels from a given dictionary file.
+        Note: The `raw` element is the json data as extracted from the ABS website using the `get_RawData()` function.
+
+    Args:
+        raw (dict): The raw data, from which the data labels will be extracted.
+        label (str, optional): The name or index of the label to be extracted. Defaults to "POA".
+        element (str, optional): The element of the label to be extracted (either `id` or `name`). Defaults to "id".
+
+    Returns:
+        dict: A dictionary containin the index (as keys) and labels (as values).
+    """
+    
+    # Declare which labels are okay
+    OkayLabels = \
+        { "POA": 0
+        , "LGA_2016": 0
+        , "SSC": 0
+        , "SEIFA_SA1_7DIGIT": 0
+        , "ASGS_2016": 0
+        , "SEIFAINDEXTYPE": 1
+        , "SEIFA_MEASURE": 2
+        , "TIME_PERIOD": 3
+        , 1: 0
+        , 2: 1
+        , 3: 2
+        , 4: 3
+        }
+
+    # Assertions
+    assert isinstance(raw, dict)
+    assert list(raw.keys())==['header', 'dataSets', 'structure']
+    assert isinstance(label, (str, int))
+    assert utils.all_in([label["id"] for label in raw["structure"]["dimensions"]["observation"]], list(OkayLabels) + list(range(4)))
+    assert element in ["id","name"]
+
+    # Get Index
+    KeyIndex = OkayLabels[label]
+
+    # Get list
+    LabelsList = raw['structure']['dimensions']['observation'][KeyIndex]['values']
+
+    # Make dict
+    dic_Labels = {str(lst_Index):lst_Label[element] for lst_Index, lst_Label in enumerate(LabelsList)}
+    
+    # Return
+    return dic_Labels
+
+
+# Extract the data ----
+def set_DataFrame(raw):
+    
+    # Assertions
+    assert isinstance(raw, dict)
+    assert list(raw)==['header','dataSets','structure']
+
+    # Get data
+    data = raw['dataSets'][0]['observations']
+
+    # Coerce to DataFrame
+    data = pd.DataFrame(data)
+
+    # Return
     return data
