@@ -1,0 +1,474 @@
+{
+    "header": {
+        "id": "08319b2b-fd16-4248-ba31-046e85da68e4",
+        "test": false,
+        "prepared": "2020-12-28T11:11:37.2722859Z",
+        "sender": {
+            "id": "ABS",
+            "name": "Australian Bureau of Statistics"
+        },
+        "links": [
+            {
+                "href": "http://stat.data.abs.gov.au:80/sdmx-json/data/ABS_SEIFA2016_SA1/1100701+1+1100702.IRSAD+IRSD+IER+IEO.SCORE+RWAR+RWA+RWAD+RWAP+RWSR+RWST+RWSD+RWSP+URP/all?detail=Full&dimensionAtObservation=AllDimensions",
+                "rel": "request"
+            }
+        ]
+    },
+    "dataSets": [
+        {
+            "action": "Information",
+            "observations": {
+                "0:0:0:0": [
+                    984.0,
+                    0,
+                    null
+                ],
+                "1:0:0:0": [
+                    1055.0,
+                    0,
+                    null
+                ],
+                "0:0:1:0": [
+                    24606.0,
+                    0,
+                    null
+                ],
+                "1:0:1:0": [
+                    38306.0,
+                    0,
+                    null
+                ],
+                "0:0:2:0": [
+                    5.0,
+                    0,
+                    null
+                ],
+                "1:0:2:0": [
+                    7.0,
+                    0,
+                    null
+                ],
+                "0:0:3:0": [
+                    45.0,
+                    0,
+                    null
+                ],
+                "1:0:3:0": [
+                    70.0,
+                    0,
+                    null
+                ],
+                "0:0:4:0": [
+                    7564.0,
+                    0,
+                    null
+                ],
+                "1:0:4:0": [
+                    11632.0,
+                    0,
+                    null
+                ],
+                "0:0:5:0": [
+                    5.0,
+                    0,
+                    null
+                ],
+                "1:0:5:0": [
+                    7.0,
+                    0,
+                    null
+                ],
+                "0:0:6:0": [
+                    43.0,
+                    0,
+                    null
+                ],
+                "1:0:6:0": [
+                    66.0,
+                    0,
+                    null
+                ],
+                "0:0:7:0": [
+                    256.0,
+                    0,
+                    null
+                ],
+                "1:0:7:0": [
+                    381.0,
+                    0,
+                    null
+                ],
+                "1:1:6:0": [
+                    75.0,
+                    0,
+                    null
+                ],
+                "1:1:2:0": [
+                    8.0,
+                    0,
+                    null
+                ],
+                "1:1:0:0": [
+                    1078.0,
+                    0,
+                    null
+                ],
+                "1:1:1:0": [
+                    42986.0,
+                    0,
+                    null
+                ],
+                "1:1:7:0": [
+                    381.0,
+                    0,
+                    null
+                ],
+                "0:1:3:0": [
+                    47.0,
+                    0,
+                    null
+                ],
+                "1:1:4:0": [
+                    13207.0,
+                    0,
+                    null
+                ],
+                "0:1:1:0": [
+                    25806.0,
+                    0,
+                    null
+                ],
+                "0:1:7:0": [
+                    256.0,
+                    0,
+                    null
+                ],
+                "1:1:5:0": [
+                    8.0,
+                    0,
+                    null
+                ],
+                "0:1:5:0": [
+                    5.0,
+                    0,
+                    null
+                ],
+                "0:1:4:0": [
+                    8216.0,
+                    0,
+                    null
+                ],
+                "0:1:6:0": [
+                    47.0,
+                    0,
+                    null
+                ],
+                "0:1:0:0": [
+                    1001.0,
+                    0,
+                    null
+                ],
+                "1:1:3:0": [
+                    79.0,
+                    0,
+                    null
+                ],
+                "0:1:2:0": [
+                    5.0,
+                    0,
+                    null
+                ],
+                "0:2:0:0": [
+                    972.0,
+                    0,
+                    null
+                ],
+                "1:2:0:0": [
+                    1044.0,
+                    0,
+                    null
+                ],
+                "0:2:1:0": [
+                    20036.0,
+                    0,
+                    null
+                ],
+                "1:2:1:0": [
+                    35605.0,
+                    0,
+                    null
+                ],
+                "0:2:2:0": [
+                    4.0,
+                    0,
+                    null
+                ],
+                "1:2:2:0": [
+                    7.0,
+                    0,
+                    null
+                ],
+                "0:2:3:0": [
+                    37.0,
+                    0,
+                    null
+                ],
+                "1:2:3:0": [
+                    65.0,
+                    0,
+                    null
+                ],
+                "0:2:4:0": [
+                    6414.0,
+                    0,
+                    null
+                ],
+                "1:2:4:0": [
+                    10790.0,
+                    0,
+                    null
+                ],
+                "0:2:5:0": [
+                    4.0,
+                    0,
+                    null
+                ],
+                "1:2:5:0": [
+                    7.0,
+                    0,
+                    null
+                ],
+                "0:2:6:0": [
+                    37.0,
+                    0,
+                    null
+                ],
+                "1:2:6:0": [
+                    62.0,
+                    0,
+                    null
+                ],
+                "0:2:7:0": [
+                    256.0,
+                    0,
+                    null
+                ],
+                "1:2:7:0": [
+                    381.0,
+                    0,
+                    null
+                ],
+                "0:3:0:0": [
+                    991.0,
+                    0,
+                    null
+                ],
+                "1:3:0:0": [
+                    1044.0,
+                    0,
+                    null
+                ],
+                "0:3:1:0": [
+                    20961.0,
+                    0,
+                    null
+                ],
+                "1:3:1:0": [
+                    33765.0,
+                    0,
+                    null
+                ],
+                "0:3:2:0": [
+                    4.0,
+                    0,
+                    null
+                ],
+                "1:3:2:0": [
+                    7.0,
+                    0,
+                    null
+                ],
+                "0:3:3:0": [
+                    39.0,
+                    0,
+                    null
+                ],
+                "1:3:3:0": [
+                    62.0,
+                    0,
+                    null
+                ],
+                "0:3:4:0": [
+                    7029.0,
+                    0,
+                    null
+                ],
+                "1:3:4:0": [
+                    10743.0,
+                    0,
+                    null
+                ],
+                "0:3:5:0": [
+                    4.0,
+                    0,
+                    null
+                ],
+                "1:3:5:0": [
+                    7.0,
+                    0,
+                    null
+                ],
+                "0:3:6:0": [
+                    40.0,
+                    0,
+                    null
+                ],
+                "1:3:6:0": [
+                    61.0,
+                    0,
+                    null
+                ],
+                "0:3:7:0": [
+                    256.0,
+                    0,
+                    null
+                ],
+                "1:3:7:0": [
+                    381.0,
+                    0,
+                    null
+                ]
+            }
+        }
+    ],
+    "structure": {
+        "links": [
+            {
+                "href": "http://stat.data.abs.gov.au/sdmx-json/dataflow/ABS_SEIFA2016_SA1/all",
+                "rel": "dataflow"
+            }
+        ],
+        "name": "SEIFA 2016 by Statistical Area 1 (SA1)",
+        "description": "SEIFA 2016 by Statistical Area 1 (SA1)",
+        "dimensions": {
+            "observation": [
+                {
+                    "keyPosition": 0,
+                    "id": "SEIFA_SA1_7DIGIT",
+                    "name": "Statistical Area (SA) 1",
+                    "values": [
+                        {
+                            "id": "1100701",
+                            "name": "1100701"
+                        },
+                        {
+                            "id": "1100702",
+                            "name": "1100702"
+                        }
+                    ]
+                },
+                {
+                    "keyPosition": 1,
+                    "id": "SEIFAINDEXTYPE",
+                    "name": "Index Type",
+                    "values": [
+                        {
+                            "id": "IEO",
+                            "name": "Index of Education and Occupation"
+                        },
+                        {
+                            "id": "IER",
+                            "name": "Index of Economic Resources"
+                        },
+                        {
+                            "id": "IRSAD",
+                            "name": "Index of Relative Socio-economic Advantage and Disadvantage"
+                        },
+                        {
+                            "id": "IRSD",
+                            "name": "Index of Relative Socio-economic Disadvantage"
+                        }
+                    ]
+                },
+                {
+                    "keyPosition": 2,
+                    "id": "SEIFA_MEASURE",
+                    "name": "Measure",
+                    "values": [
+                        {
+                            "id": "SCORE",
+                            "name": "Score"
+                        },
+                        {
+                            "id": "RWAR",
+                            "name": "Rank within Australia"
+                        },
+                        {
+                            "id": "RWAD",
+                            "name": "Rank within Australia - Decile"
+                        },
+                        {
+                            "id": "RWAP",
+                            "name": "Rank within Australia - Percentile"
+                        },
+                        {
+                            "id": "RWSR",
+                            "name": "Rank within State or Territory"
+                        },
+                        {
+                            "id": "RWSD",
+                            "name": "Rank within State or Territory - Decile"
+                        },
+                        {
+                            "id": "RWSP",
+                            "name": "Rank within State or Territory - Percentile"
+                        },
+                        {
+                            "id": "URP",
+                            "name": "Usual resident population"
+                        }
+                    ]
+                },
+                {
+                    "id": "TIME_PERIOD",
+                    "name": "Time",
+                    "values": [
+                        {
+                            "id": "2016",
+                            "name": "2016"
+                        }
+                    ],
+                    "role": "TIME_PERIOD"
+                }
+            ]
+        },
+        "attributes": {
+            "dataSet": [],
+            "series": [],
+            "observation": [
+                {
+                    "id": "TIME_FORMAT",
+                    "name": "Time Format",
+                    "values": [
+                        {
+                            "id": "P1Y",
+                            "name": "Annual"
+                        }
+                    ]
+                },
+                {
+                    "id": "OBS_STATUS",
+                    "name": "Observation Status",
+                    "values": []
+                }
+            ]
+        },
+        "annotations": [
+            {
+                "title": "Statistical usage warning",
+                "uri": "",
+                "text": "ABS.Stat beta is continuing to be developed.  Data will be updated as soon as possible following its 11:30 am release on the ABS website."
+            }
+        ]
+    }
+}

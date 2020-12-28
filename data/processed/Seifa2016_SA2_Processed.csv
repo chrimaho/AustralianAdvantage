@@ -1,0 +1,193 @@
+,value,StatisticalArea(SA)1,IndexType,Measure,Time,StatisticalArea(SA)1Long,IndexTypeLong,MeasureLong,TimeLong
+0,984.0,1100701,IEO,SCORE,2016,1100701,Index of Education and Occupation,Score,2016
+1,0.0,1100701,IEO,SCORE,2016,1100701,Index of Education and Occupation,Score,2016
+2,,1100701,IEO,SCORE,2016,1100701,Index of Education and Occupation,Score,2016
+3,1055.0,1100702,IEO,SCORE,2016,1100702,Index of Education and Occupation,Score,2016
+4,0.0,1100702,IEO,SCORE,2016,1100702,Index of Education and Occupation,Score,2016
+5,,1100702,IEO,SCORE,2016,1100702,Index of Education and Occupation,Score,2016
+6,24606.0,1100701,IEO,RWAR,2016,1100701,Index of Education and Occupation,Rank within Australia,2016
+7,0.0,1100701,IEO,RWAR,2016,1100701,Index of Education and Occupation,Rank within Australia,2016
+8,,1100701,IEO,RWAR,2016,1100701,Index of Education and Occupation,Rank within Australia,2016
+9,38306.0,1100702,IEO,RWAR,2016,1100702,Index of Education and Occupation,Rank within Australia,2016
+10,0.0,1100702,IEO,RWAR,2016,1100702,Index of Education and Occupation,Rank within Australia,2016
+11,,1100702,IEO,RWAR,2016,1100702,Index of Education and Occupation,Rank within Australia,2016
+12,5.0,1100701,IEO,RWAD,2016,1100701,Index of Education and Occupation,Rank within Australia - Decile,2016
+13,0.0,1100701,IEO,RWAD,2016,1100701,Index of Education and Occupation,Rank within Australia - Decile,2016
+14,,1100701,IEO,RWAD,2016,1100701,Index of Education and Occupation,Rank within Australia - Decile,2016
+15,7.0,1100702,IEO,RWAD,2016,1100702,Index of Education and Occupation,Rank within Australia - Decile,2016
+16,0.0,1100702,IEO,RWAD,2016,1100702,Index of Education and Occupation,Rank within Australia - Decile,2016
+17,,1100702,IEO,RWAD,2016,1100702,Index of Education and Occupation,Rank within Australia - Decile,2016
+18,45.0,1100701,IEO,RWAP,2016,1100701,Index of Education and Occupation,Rank within Australia - Percentile,2016
+19,0.0,1100701,IEO,RWAP,2016,1100701,Index of Education and Occupation,Rank within Australia - Percentile,2016
+20,,1100701,IEO,RWAP,2016,1100701,Index of Education and Occupation,Rank within Australia - Percentile,2016
+21,70.0,1100702,IEO,RWAP,2016,1100702,Index of Education and Occupation,Rank within Australia - Percentile,2016
+22,0.0,1100702,IEO,RWAP,2016,1100702,Index of Education and Occupation,Rank within Australia - Percentile,2016
+23,,1100702,IEO,RWAP,2016,1100702,Index of Education and Occupation,Rank within Australia - Percentile,2016
+24,7564.0,1100701,IEO,RWSR,2016,1100701,Index of Education and Occupation,Rank within State or Territory,2016
+25,0.0,1100701,IEO,RWSR,2016,1100701,Index of Education and Occupation,Rank within State or Territory,2016
+26,,1100701,IEO,RWSR,2016,1100701,Index of Education and Occupation,Rank within State or Territory,2016
+27,11632.0,1100702,IEO,RWSR,2016,1100702,Index of Education and Occupation,Rank within State or Territory,2016
+28,0.0,1100702,IEO,RWSR,2016,1100702,Index of Education and Occupation,Rank within State or Territory,2016
+29,,1100702,IEO,RWSR,2016,1100702,Index of Education and Occupation,Rank within State or Territory,2016
+30,5.0,1100701,IEO,RWSD,2016,1100701,Index of Education and Occupation,Rank within State or Territory - Decile,2016
+31,0.0,1100701,IEO,RWSD,2016,1100701,Index of Education and Occupation,Rank within State or Territory - Decile,2016
+32,,1100701,IEO,RWSD,2016,1100701,Index of Education and Occupation,Rank within State or Territory - Decile,2016
+33,7.0,1100702,IEO,RWSD,2016,1100702,Index of Education and Occupation,Rank within State or Territory - Decile,2016
+34,0.0,1100702,IEO,RWSD,2016,1100702,Index of Education and Occupation,Rank within State or Territory - Decile,2016
+35,,1100702,IEO,RWSD,2016,1100702,Index of Education and Occupation,Rank within State or Territory - Decile,2016
+36,43.0,1100701,IEO,RWSP,2016,1100701,Index of Education and Occupation,Rank within State or Territory - Percentile,2016
+37,0.0,1100701,IEO,RWSP,2016,1100701,Index of Education and Occupation,Rank within State or Territory - Percentile,2016
+38,,1100701,IEO,RWSP,2016,1100701,Index of Education and Occupation,Rank within State or Territory - Percentile,2016
+39,66.0,1100702,IEO,RWSP,2016,1100702,Index of Education and Occupation,Rank within State or Territory - Percentile,2016
+40,0.0,1100702,IEO,RWSP,2016,1100702,Index of Education and Occupation,Rank within State or Territory - Percentile,2016
+41,,1100702,IEO,RWSP,2016,1100702,Index of Education and Occupation,Rank within State or Territory - Percentile,2016
+42,256.0,1100701,IEO,URP,2016,1100701,Index of Education and Occupation,Usual resident population,2016
+43,0.0,1100701,IEO,URP,2016,1100701,Index of Education and Occupation,Usual resident population,2016
+44,,1100701,IEO,URP,2016,1100701,Index of Education and Occupation,Usual resident population,2016
+45,381.0,1100702,IEO,URP,2016,1100702,Index of Education and Occupation,Usual resident population,2016
+46,0.0,1100702,IEO,URP,2016,1100702,Index of Education and Occupation,Usual resident population,2016
+47,,1100702,IEO,URP,2016,1100702,Index of Education and Occupation,Usual resident population,2016
+48,75.0,1100702,IER,RWSP,2016,1100702,Index of Economic Resources,Rank within State or Territory - Percentile,2016
+49,0.0,1100702,IER,RWSP,2016,1100702,Index of Economic Resources,Rank within State or Territory - Percentile,2016
+50,,1100702,IER,RWSP,2016,1100702,Index of Economic Resources,Rank within State or Territory - Percentile,2016
+51,8.0,1100702,IER,RWAD,2016,1100702,Index of Economic Resources,Rank within Australia - Decile,2016
+52,0.0,1100702,IER,RWAD,2016,1100702,Index of Economic Resources,Rank within Australia - Decile,2016
+53,,1100702,IER,RWAD,2016,1100702,Index of Economic Resources,Rank within Australia - Decile,2016
+54,1078.0,1100702,IER,SCORE,2016,1100702,Index of Economic Resources,Score,2016
+55,0.0,1100702,IER,SCORE,2016,1100702,Index of Economic Resources,Score,2016
+56,,1100702,IER,SCORE,2016,1100702,Index of Economic Resources,Score,2016
+57,42986.0,1100702,IER,RWAR,2016,1100702,Index of Economic Resources,Rank within Australia,2016
+58,0.0,1100702,IER,RWAR,2016,1100702,Index of Economic Resources,Rank within Australia,2016
+59,,1100702,IER,RWAR,2016,1100702,Index of Economic Resources,Rank within Australia,2016
+60,381.0,1100702,IER,URP,2016,1100702,Index of Economic Resources,Usual resident population,2016
+61,0.0,1100702,IER,URP,2016,1100702,Index of Economic Resources,Usual resident population,2016
+62,,1100702,IER,URP,2016,1100702,Index of Economic Resources,Usual resident population,2016
+63,47.0,1100701,IER,RWAP,2016,1100701,Index of Economic Resources,Rank within Australia - Percentile,2016
+64,0.0,1100701,IER,RWAP,2016,1100701,Index of Economic Resources,Rank within Australia - Percentile,2016
+65,,1100701,IER,RWAP,2016,1100701,Index of Economic Resources,Rank within Australia - Percentile,2016
+66,13207.0,1100702,IER,RWSR,2016,1100702,Index of Economic Resources,Rank within State or Territory,2016
+67,0.0,1100702,IER,RWSR,2016,1100702,Index of Economic Resources,Rank within State or Territory,2016
+68,,1100702,IER,RWSR,2016,1100702,Index of Economic Resources,Rank within State or Territory,2016
+69,25806.0,1100701,IER,RWAR,2016,1100701,Index of Economic Resources,Rank within Australia,2016
+70,0.0,1100701,IER,RWAR,2016,1100701,Index of Economic Resources,Rank within Australia,2016
+71,,1100701,IER,RWAR,2016,1100701,Index of Economic Resources,Rank within Australia,2016
+72,256.0,1100701,IER,URP,2016,1100701,Index of Economic Resources,Usual resident population,2016
+73,0.0,1100701,IER,URP,2016,1100701,Index of Economic Resources,Usual resident population,2016
+74,,1100701,IER,URP,2016,1100701,Index of Economic Resources,Usual resident population,2016
+75,8.0,1100702,IER,RWSD,2016,1100702,Index of Economic Resources,Rank within State or Territory - Decile,2016
+76,0.0,1100702,IER,RWSD,2016,1100702,Index of Economic Resources,Rank within State or Territory - Decile,2016
+77,,1100702,IER,RWSD,2016,1100702,Index of Economic Resources,Rank within State or Territory - Decile,2016
+78,5.0,1100701,IER,RWSD,2016,1100701,Index of Economic Resources,Rank within State or Territory - Decile,2016
+79,0.0,1100701,IER,RWSD,2016,1100701,Index of Economic Resources,Rank within State or Territory - Decile,2016
+80,,1100701,IER,RWSD,2016,1100701,Index of Economic Resources,Rank within State or Territory - Decile,2016
+81,8216.0,1100701,IER,RWSR,2016,1100701,Index of Economic Resources,Rank within State or Territory,2016
+82,0.0,1100701,IER,RWSR,2016,1100701,Index of Economic Resources,Rank within State or Territory,2016
+83,,1100701,IER,RWSR,2016,1100701,Index of Economic Resources,Rank within State or Territory,2016
+84,47.0,1100701,IER,RWSP,2016,1100701,Index of Economic Resources,Rank within State or Territory - Percentile,2016
+85,0.0,1100701,IER,RWSP,2016,1100701,Index of Economic Resources,Rank within State or Territory - Percentile,2016
+86,,1100701,IER,RWSP,2016,1100701,Index of Economic Resources,Rank within State or Territory - Percentile,2016
+87,1001.0,1100701,IER,SCORE,2016,1100701,Index of Economic Resources,Score,2016
+88,0.0,1100701,IER,SCORE,2016,1100701,Index of Economic Resources,Score,2016
+89,,1100701,IER,SCORE,2016,1100701,Index of Economic Resources,Score,2016
+90,79.0,1100702,IER,RWAP,2016,1100702,Index of Economic Resources,Rank within Australia - Percentile,2016
+91,0.0,1100702,IER,RWAP,2016,1100702,Index of Economic Resources,Rank within Australia - Percentile,2016
+92,,1100702,IER,RWAP,2016,1100702,Index of Economic Resources,Rank within Australia - Percentile,2016
+93,5.0,1100701,IER,RWAD,2016,1100701,Index of Economic Resources,Rank within Australia - Decile,2016
+94,0.0,1100701,IER,RWAD,2016,1100701,Index of Economic Resources,Rank within Australia - Decile,2016
+95,,1100701,IER,RWAD,2016,1100701,Index of Economic Resources,Rank within Australia - Decile,2016
+96,972.0,1100701,IRSAD,SCORE,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Score,2016
+97,0.0,1100701,IRSAD,SCORE,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Score,2016
+98,,1100701,IRSAD,SCORE,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Score,2016
+99,1044.0,1100702,IRSAD,SCORE,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Score,2016
+100,0.0,1100702,IRSAD,SCORE,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Score,2016
+101,,1100702,IRSAD,SCORE,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Score,2016
+102,20036.0,1100701,IRSAD,RWAR,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia,2016
+103,0.0,1100701,IRSAD,RWAR,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia,2016
+104,,1100701,IRSAD,RWAR,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia,2016
+105,35605.0,1100702,IRSAD,RWAR,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia,2016
+106,0.0,1100702,IRSAD,RWAR,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia,2016
+107,,1100702,IRSAD,RWAR,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia,2016
+108,4.0,1100701,IRSAD,RWAD,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia - Decile,2016
+109,0.0,1100701,IRSAD,RWAD,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia - Decile,2016
+110,,1100701,IRSAD,RWAD,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia - Decile,2016
+111,7.0,1100702,IRSAD,RWAD,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia - Decile,2016
+112,0.0,1100702,IRSAD,RWAD,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia - Decile,2016
+113,,1100702,IRSAD,RWAD,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia - Decile,2016
+114,37.0,1100701,IRSAD,RWAP,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia - Percentile,2016
+115,0.0,1100701,IRSAD,RWAP,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia - Percentile,2016
+116,,1100701,IRSAD,RWAP,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia - Percentile,2016
+117,65.0,1100702,IRSAD,RWAP,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia - Percentile,2016
+118,0.0,1100702,IRSAD,RWAP,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia - Percentile,2016
+119,,1100702,IRSAD,RWAP,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within Australia - Percentile,2016
+120,6414.0,1100701,IRSAD,RWSR,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory,2016
+121,0.0,1100701,IRSAD,RWSR,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory,2016
+122,,1100701,IRSAD,RWSR,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory,2016
+123,10790.0,1100702,IRSAD,RWSR,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory,2016
+124,0.0,1100702,IRSAD,RWSR,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory,2016
+125,,1100702,IRSAD,RWSR,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory,2016
+126,4.0,1100701,IRSAD,RWSD,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory - Decile,2016
+127,0.0,1100701,IRSAD,RWSD,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory - Decile,2016
+128,,1100701,IRSAD,RWSD,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory - Decile,2016
+129,7.0,1100702,IRSAD,RWSD,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory - Decile,2016
+130,0.0,1100702,IRSAD,RWSD,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory - Decile,2016
+131,,1100702,IRSAD,RWSD,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory - Decile,2016
+132,37.0,1100701,IRSAD,RWSP,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory - Percentile,2016
+133,0.0,1100701,IRSAD,RWSP,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory - Percentile,2016
+134,,1100701,IRSAD,RWSP,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory - Percentile,2016
+135,62.0,1100702,IRSAD,RWSP,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory - Percentile,2016
+136,0.0,1100702,IRSAD,RWSP,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory - Percentile,2016
+137,,1100702,IRSAD,RWSP,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Rank within State or Territory - Percentile,2016
+138,256.0,1100701,IRSAD,URP,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Usual resident population,2016
+139,0.0,1100701,IRSAD,URP,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Usual resident population,2016
+140,,1100701,IRSAD,URP,2016,1100701,Index of Relative Socio-economic Advantage and Disadvantage,Usual resident population,2016
+141,381.0,1100702,IRSAD,URP,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Usual resident population,2016
+142,0.0,1100702,IRSAD,URP,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Usual resident population,2016
+143,,1100702,IRSAD,URP,2016,1100702,Index of Relative Socio-economic Advantage and Disadvantage,Usual resident population,2016
+144,991.0,1100701,IRSD,SCORE,2016,1100701,Index of Relative Socio-economic Disadvantage,Score,2016
+145,0.0,1100701,IRSD,SCORE,2016,1100701,Index of Relative Socio-economic Disadvantage,Score,2016
+146,,1100701,IRSD,SCORE,2016,1100701,Index of Relative Socio-economic Disadvantage,Score,2016
+147,1044.0,1100702,IRSD,SCORE,2016,1100702,Index of Relative Socio-economic Disadvantage,Score,2016
+148,0.0,1100702,IRSD,SCORE,2016,1100702,Index of Relative Socio-economic Disadvantage,Score,2016
+149,,1100702,IRSD,SCORE,2016,1100702,Index of Relative Socio-economic Disadvantage,Score,2016
+150,20961.0,1100701,IRSD,RWAR,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within Australia,2016
+151,0.0,1100701,IRSD,RWAR,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within Australia,2016
+152,,1100701,IRSD,RWAR,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within Australia,2016
+153,33765.0,1100702,IRSD,RWAR,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within Australia,2016
+154,0.0,1100702,IRSD,RWAR,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within Australia,2016
+155,,1100702,IRSD,RWAR,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within Australia,2016
+156,4.0,1100701,IRSD,RWAD,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within Australia - Decile,2016
+157,0.0,1100701,IRSD,RWAD,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within Australia - Decile,2016
+158,,1100701,IRSD,RWAD,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within Australia - Decile,2016
+159,7.0,1100702,IRSD,RWAD,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within Australia - Decile,2016
+160,0.0,1100702,IRSD,RWAD,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within Australia - Decile,2016
+161,,1100702,IRSD,RWAD,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within Australia - Decile,2016
+162,39.0,1100701,IRSD,RWAP,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within Australia - Percentile,2016
+163,0.0,1100701,IRSD,RWAP,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within Australia - Percentile,2016
+164,,1100701,IRSD,RWAP,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within Australia - Percentile,2016
+165,62.0,1100702,IRSD,RWAP,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within Australia - Percentile,2016
+166,0.0,1100702,IRSD,RWAP,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within Australia - Percentile,2016
+167,,1100702,IRSD,RWAP,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within Australia - Percentile,2016
+168,7029.0,1100701,IRSD,RWSR,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within State or Territory,2016
+169,0.0,1100701,IRSD,RWSR,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within State or Territory,2016
+170,,1100701,IRSD,RWSR,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within State or Territory,2016
+171,10743.0,1100702,IRSD,RWSR,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within State or Territory,2016
+172,0.0,1100702,IRSD,RWSR,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within State or Territory,2016
+173,,1100702,IRSD,RWSR,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within State or Territory,2016
+174,4.0,1100701,IRSD,RWSD,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within State or Territory - Decile,2016
+175,0.0,1100701,IRSD,RWSD,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within State or Territory - Decile,2016
+176,,1100701,IRSD,RWSD,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within State or Territory - Decile,2016
+177,7.0,1100702,IRSD,RWSD,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within State or Territory - Decile,2016
+178,0.0,1100702,IRSD,RWSD,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within State or Territory - Decile,2016
+179,,1100702,IRSD,RWSD,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within State or Territory - Decile,2016
+180,40.0,1100701,IRSD,RWSP,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within State or Territory - Percentile,2016
+181,0.0,1100701,IRSD,RWSP,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within State or Territory - Percentile,2016
+182,,1100701,IRSD,RWSP,2016,1100701,Index of Relative Socio-economic Disadvantage,Rank within State or Territory - Percentile,2016
+183,61.0,1100702,IRSD,RWSP,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within State or Territory - Percentile,2016
+184,0.0,1100702,IRSD,RWSP,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within State or Territory - Percentile,2016
+185,,1100702,IRSD,RWSP,2016,1100702,Index of Relative Socio-economic Disadvantage,Rank within State or Territory - Percentile,2016
+186,256.0,1100701,IRSD,URP,2016,1100701,Index of Relative Socio-economic Disadvantage,Usual resident population,2016
+187,0.0,1100701,IRSD,URP,2016,1100701,Index of Relative Socio-economic Disadvantage,Usual resident population,2016
+188,,1100701,IRSD,URP,2016,1100701,Index of Relative Socio-economic Disadvantage,Usual resident population,2016
+189,381.0,1100702,IRSD,URP,2016,1100702,Index of Relative Socio-economic Disadvantage,Usual resident population,2016
+190,0.0,1100702,IRSD,URP,2016,1100702,Index of Relative Socio-economic Disadvantage,Usual resident population,2016
+191,,1100702,IRSD,URP,2016,1100702,Index of Relative Socio-economic Disadvantage,Usual resident population,2016
